@@ -79,8 +79,8 @@ export function RepoSelector({ onSelect, onClose }: RepoSelectorProps) {
 
   return (
     <Dialog open onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl bg-[#0f0f0f] border-white/10 text-white max-h-[80vh] flex flex-col">
-        <DialogHeader>
+      <DialogContent className="max-w-2xl bg-[#0f0f0f] border-white/10 text-white max-h-[80vh] flex flex-col overflow-hidden p-0">
+        <DialogHeader className="px-6 pt-6 pb-0 shrink-0">
           <DialogTitle className="flex items-center gap-2 text-xl">
             <FolderGit className="w-6 h-6 text-[#ff4d00]" />
             Select Repository
@@ -88,8 +88,8 @@ export function RepoSelector({ onSelect, onClose }: RepoSelectorProps) {
         </DialogHeader>
 
         {/* Search */}
-        <div className="relative mt-4">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+        <div className="relative mt-4 px-6 shrink-0">
+          <Search className="absolute left-9 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
           <Input
             placeholder="Search repositories..."
             value={searchQuery}
@@ -99,7 +99,7 @@ export function RepoSelector({ onSelect, onClose }: RepoSelectorProps) {
         </div>
 
         {/* Repo List */}
-        <ScrollArea className="flex-1 mt-4 -mx-6 px-6 max-h-[50vh]">
+        <ScrollArea className="flex-1 mt-4 px-6 min-h-0">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-12">
               <div className="w-8 h-8 border-2 border-[#ff4d00]/30 border-t-[#ff4d00] rounded-full animate-spin mb-4" />
