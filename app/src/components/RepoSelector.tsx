@@ -171,7 +171,7 @@ export function RepoSelector({ onSelect, onClose }: RepoSelectorProps) {
         </ScrollArea>
 
         {/* Footer */}
-        <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
+        <div className="flex items-center justify-between mt-4 pt-4 pb-6 px-6 border-t border-white/10 shrink-0">
           <div className="flex items-center gap-2">
             <Button
               variant="ghost"
