@@ -99,7 +99,7 @@ export function RepoSelector({ onSelect, onClose }: RepoSelectorProps) {
         </div>
 
         {/* Repo List */}
-        <ScrollArea className="flex-1 mt-4 -mx-6 px-6">
+        <ScrollArea className="flex-1 mt-4 -mx-6 px-6 max-h-[50vh]">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center py-12">
               <div className="w-8 h-8 border-2 border-[#ff4d00]/30 border-t-[#ff4d00] rounded-full animate-spin mb-4" />
